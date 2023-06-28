@@ -34,39 +34,6 @@ button {
   color: $orange;
 }
 
-.history-wrapper {
-  width: 300px;
-  text-align: center;
-  margin-bottom: 20px;
-  .history {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    li {
-      list-style: none;
-      text-align: left;
-      &:before {
-        content: '';
-        border-radius: 50%;
-        display: inline-block;
-        height: 5px;
-        width: 5px;
-        background-color: $green;
-        margin-right: 4px;
-        margin-bottom: 1px;
-      }
-
-      .btn-move {
-        color: #fff;
-        &.active {
-          font-weight: bold;
-          color: $green;
-        }
-      }
-    }
-  }
-}
-
 .status-message {
   margin-bottom: 30px;
   font-size: 1.2rem;
@@ -235,3 +202,67 @@ button {
     background-color: darken($orange, 10%);
   }
 }
+
+/* History Cool Styles */
+.history-wrapper {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  .history {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      text-align: left;
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 8px;
+      &:before {
+        content: '';
+        border-radius: 50%;
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        margin-right: 4px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .btn-move {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        width: 200px;
+        margin-bottom: 5px;
+
+        &:hover {
+          background-color: #555;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:active {
+          background-color: #111;
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+/* History end */
